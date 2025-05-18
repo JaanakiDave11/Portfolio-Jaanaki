@@ -50,12 +50,41 @@ themeToggle.addEventListener('click', () => {
   }, 500);
 });
 
-// Mobile Navigation Handlers
-mobileNavToggle.addEventListener('click', () => {
+// Mobile Navigation
+function toggleMobileNav() {
   const isOpen = navLinks.classList.contains('active');
   navLinks.classList.toggle('active');
   mobileNavToggle.textContent = isOpen ? '☰' : '✕';
-  document.body.style.overflow = isOpen ? '' : 'hidden';
+  
+  if (!isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+
+function closeMobileNav() {
+  navLinks.classList.remove('active');
+  mobileNavToggle.textContent = '☰';
+  document.body.style.overflow = '';
+}
+
+// Event Listeners
+mobileNavToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleMobileNav();
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', closeMobileNav);
+});
+
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('active') &&
+      !e.target.closest('.nav-links') &&
+      !e.target.closest('.mobile-nav-toggle')) {
+    closeMobileNav();
+  }
 });
 
 // Scroll Progress Handler
@@ -296,24 +325,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('mouseleave', () => {
     link.style.transform = 'scale(1)';
   });
-});
-
-// Close mobile nav when clicking a link
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    mobileNavToggle.textContent = '☰';
-    document.body.style.overflow = '';
-  });
-});
-
-// Close mobile nav when clicking outside
-document.addEventListener('click', (e) => {
-  if (navLinks.classList.contains('active') &&
-      !e.target.closest('.nav-links') &&
-      !e.target.closest('.mobile-nav-toggle')) {
-    navLinks.classList.remove('active');
-    mobileNavToggle.textContent = '☰';
-    document.body.style.overflow = '';
-  }
 });

@@ -479,13 +479,29 @@ footer a {
 
 /* Contact */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.contact-info {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  width: 100%;
 }
 
 .contact-item {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 215, 0, 0.1);
 }
 
 .contact-item:last-child {
@@ -495,10 +511,23 @@ footer a {
 .contact-item h4 {
   color: var(--accent);
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
 }
 
 .contact-item p {
   margin-bottom: 0;
+  font-size: 1.1rem;
 }
 
 .contact-form {
@@ -555,7 +584,7 @@ footer a {
 /* Responsive Design Updates */
 @media (max-width: 768px) {
   .contact-grid {
-    grid-template-columns: 1fr;
+    padding: 1rem 0;
   }
   
   .portfolio-filters {
@@ -606,7 +635,7 @@ footer a {
   margin-bottom: 0;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation Toggle Button */
 .mobile-nav-toggle {
   display: none;
   background: none;
@@ -618,35 +647,66 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  /* Navigation */
   .mobile-nav-toggle {
     display: block;
+    position: relative;
+    z-index: 1002;
+    margin-left: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  nav h1 {
+    display: none;
+  }
+
+  nav .linkedin-btn {
+    display: none !important;
+  }
+
+  #theme-toggle {
+    order: 1;
+  }
+
+  .mobile-nav-toggle {
+    order: 2;
   }
 
   .nav-links {
+    display: none;
     position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 100%;
+    inset: var(--nav-height) 0 0 0;
     background: var(--bg-secondary);
+    padding: 2rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: right 0.3s ease;
-    z-index: 1000;
+    gap: 2rem;
+    z-index: 1001;
   }
 
   .nav-links.active {
-    right: 0;
+    display: flex;
   }
 
   .nav-links li {
-    margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links a {
+    display: block;
+    padding: 0.5rem;
     font-size: 1.2rem;
+  }
+
+  .linkedin-btn {
+    margin-right: 1rem;
   }
 
   /* Hero Section */
