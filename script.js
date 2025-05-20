@@ -208,7 +208,7 @@ window.addEventListener('orientationchange', () => {
   navLinks.classList.remove('active');
   mobileNavToggle.textContent = '☰';
   setTimeout(updateActiveSection, 100);
-});
+  });
 
 // Portfolio Filtering
 const filterButtons = document.querySelectorAll('.filter-btn');
@@ -244,7 +244,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
-      });
+    });
     }
   });
 });

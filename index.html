@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaanaki Dave | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="modern-style.css" />
   <script defer src="script.js"></script>
@@ -15,18 +16,18 @@
   </div>
 
   <nav>
-    <h1>Jaanaki Dave</h1>
+    <a href="#home" class="nav-logo">
+      <img src="favicon.svg" alt="JD" class="nav-favicon">
+    </a>
     <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="https://linkedin.com/in/jaanakidave" target="_blank" class="linkedin-btn">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn">
-    </a>
     <button id="theme-toggle">🌓</button>
   </nav>
 
@@ -50,104 +51,84 @@
     <p>My academic journey and hands-on experiences have fostered adaptability, critical thinking, and a passion for solving complex problems. I specialize in developing innovative solutions using cutting-edge technologies in AI and software development.</p>
     <div class="what-im-doing">
       <h3>Technical Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
+      <div class="skills-badges">
+        <div class="skills-group">
           <h4>Programming Languages</h4>
-          <div class="skill-details">
-            <ul>
-              <li>Python - Advanced ML/AI development, data processing</li>
-              <li>C++ - System programming, algorithm implementation</li>
-              <li>Java - Android app development, backend services</li>
-              <li>Kotlin - Modern Android development</li>
-            </ul>
+          <div class="badges">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">Kotlin</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">R</span>
+            <span class="skill-badge">Bash</span>
+            <span class="skill-badge">SQL</span>
           </div>
         </div>
-        <div class="skill-card">
+        <div class="skills-group">
           <h4>Web Development</h4>
-          <div class="skill-details">
-            <ul>
-              <li>HTML5/CSS3 - Modern responsive layouts</li>
-              <li>JavaScript - Interactive frontend development</li>
-              <li>AngularJS - Single page applications</li>
-              <li>Node.js - Server-side development</li>
-            </ul>
+          <div class="badges">
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge">Angular</span>
+            <span class="skill-badge">AngularJS</span>
+            <span class="skill-badge">Node.js</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h4>Tools & Technologies</h4>
-          <div class="skill-details">
-            <ul>
-              <li>IntelliJ IDEA - Java/Kotlin development</li>
-              <li>Visual Studio - C++ development</li>
-              <li>Android Studio - Mobile app development</li>
-              <li>MySQL/Firebase - Database management</li>
-            </ul>
+        <div class="skills-group">
+          <h4>Software &amp; Tools</h4>
+          <div class="badges">
+            <span class="skill-badge">IntelliJ IDEA</span>
+            <span class="skill-badge">Visual Studio</span>
+            <span class="skill-badge">RStudio</span>
+            <span class="skill-badge">Sublime Text</span>
+            <span class="skill-badge">Android Studio</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">Figma</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Database &amp; Cloud</h4>
+          <div class="badges">
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">Firebase</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">SQLite</span>
+            <span class="skill-badge">AWS (S3, EC2, Lambda)</span>
+            <span class="skill-badge">Google Cloud Platform</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Data Science &amp; ML Tools</h4>
+          <div class="badges">
+            <span class="skill-badge">Jupyter Notebook</span>
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">Scikit-learn</span>
+            <span class="skill-badge">TensorFlow</span>
+            <span class="skill-badge">Keras</span>
+            <span class="skill-badge">PyTorch</span>
+            <span class="skill-badge">Matplotlib</span>
+            <span class="skill-badge">Tableau</span>
+            <span class="skill-badge">Power BI</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>Mobile Development</h4>
+          <div class="badges">
+            <span class="skill-badge">Android (Java/Kotlin)</span>
+            <span class="skill-badge">React Native</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="resume" class="container">
-    <h2>Resume</h2>
-    <div class="resume-section">
-      <h3>Education</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Master's of Science - Computer Science (Artificial Intelligence)</h4>
-          <p class="timeline-date">2025/01 – 2026/12</p>
-          <p>University of Southern California, Los Angeles, USA</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Bachelor of Technology</h4>
-          <p class="timeline-date">2021/07 – 2024/06</p>
-          <p>SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering</p>
-          <p>Academic Score: 3.61/4</p>
-        </div>
-      </div>
-    </div>
-    <div class="resume-section">
-      <h3>Experience</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Junior Software Engineer</h4>
-          <p class="timeline-date">2024/06 – 2024/11</p>
-          <p>Aum Imagineering Pvt. Ltd.</p>
-          <div class="timeline-details">
-            <ul>
-              <li>Developed AI-powered features for enterprise applications</li>
-              <li>Implemented responsive web interfaces using modern frameworks</li>
-              <li>Collaborated with cross-functional teams for product development</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <h4>Product Engineering and Innovation Intern</h4>
-          <p class="timeline-date">2023/06 – 2023/10</p>
-          <p>NTT Data Ltd.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Software Development Intern</h4>
-          <p class="timeline-date">2021/12 – 2022/04</p>
-          <p>Ocius Technologies</p>
-        </div>
-      </div>
-    </div>
-    <div class="resume-section">
-      <h3>Certificates</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Introduction to Machine Learning on AWS</h4>
-        </div>
-        <div class="timeline-item">
-          <h4>TCS ion career edge - young professional</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio" class="container">
-    <h2>Portfolio</h2>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
     <div class="portfolio-filters">
       <button class="filter-btn active">All</button>
       <button class="filter-btn">AI Projects</button>
@@ -174,6 +155,66 @@
     </div>
   </section>
 
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="resume-section">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Master's of Science - Computer Science (Artificial Intelligence)</h4>
+          <p class="timeline-date">2025/01 – 2026/12</p>
+          <p>University of Southern California, Los Angeles, USA</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Bachelor of Technology</h4>
+          <p class="timeline-date">2021/07 – 2024/06</p>
+          <p>SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering</p>
+          <p>Academic Score: 3.61/4</p>
+        </div>
+      </div>
+    </div>
+    <div class="resume-section">
+      <h3>Certificates</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Introduction to Machine Learning on AWS</h4>
+        </div>
+        <div class="timeline-item">
+          <h4>TCS ion career edge - young professional</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="resume-section">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Junior Software Engineer</h4>
+          <p class="timeline-date">2024/06 – 2024/11</p>
+          <p>Aum Imagineering Pvt. Ltd.</p>
+          <div class="timeline-details">
+            <ul>
+              <li>Developed AI-powered features for enterprise applications</li>
+              <li>Implemented responsive web interfaces using modern frameworks</li>
+              <li>Collaborated with cross-functional teams for product development</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <h4>Product Engineering and Innovation Intern</h4>
+          <p class="timeline-date">2023/06 – 2023/10</p>
+          <p>NTT Data Ltd.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Software Development Intern</h4>
+          <p class="timeline-date">2021/12 – 2022/04</p>
+          <p>Ocius Technologies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="container">
     <h2>Contact</h2>
     <div class="contact-grid">
@@ -188,7 +229,7 @@
         </div>
         <div class="contact-item">
           <h4>GitHub</h4>
-          <a href="https://github.com/jaanakidave" target="_blank">github.com/jaanakidave</a>
+          <a href="https://github.com/JaanakiDave11" target="_blank">github.com/JaanakiDave11</a>
         </div>
         <div class="contact-item">
           <h4>Location</h4>
@@ -203,7 +244,7 @@
     <div class="social-links">
       <a href="https://linkedin.com/in/jaanakidave" target="_blank">LinkedIn</a>
       <a href="mailto:jaanaki.dave@gmail.com">Email</a>
-      <a href="https://github.com/jaanakidave" target="_blank">GitHub</a>
+      <a href="https://github.com/JaanakiDave11" target="_blank">GitHub</a>
     </div>
   </footer>
 
