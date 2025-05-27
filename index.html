@@ -22,10 +22,9 @@
     <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button id="theme-toggle">🌓</button>
@@ -34,10 +33,10 @@
   <section class="hero" id="home">
     <div class="hero-text">
       <h1>Hello, I am<br>Jaanaki Dave</h1>
-      <p>As a Computer Engineering graduate, I bring strong expertise in Android development, web development, software integration, and machine learning. I am eager to contribute to groundbreaking advancements in computer science and artificial intelligence.</p>
+      <p>Graduate student in Computer Science with a strong interest in building practical, AI-driven solutions. Experienced in software development, machine learning, and natural language processing. Enjoy turning ideas into end-to-end products—from mobile apps and automation tools to scalable systems. Curious, detail-oriented, and always eager to learn and improve.</p>
       <div class="hero-tags">
-        <span class="tag">💻 Developer</span>
-        <span class="tag">🤖 AI Specialist</span>
+        <span class="tag">💻 Full Stack Developer</span>
+        <span class="tag">🤖 AI Enthusiast</span>
         <span class="tag">📱 Android Dev</span>
       </div>
     </div>
@@ -48,9 +47,65 @@
 
   <section id="about" class="container">
     <h2>About Me</h2>
-    <p>My academic journey and hands-on experiences have fostered adaptability, critical thinking, and a passion for solving complex problems. I specialize in developing innovative solutions using cutting-edge technologies in AI and software development.</p>
+    <div class="about-flex">
+      <div class="about-education">
+        <h3>Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Master's of Science - Computer Science (Artificial Intelligence)</h4>
+            <p class="timeline-date">2025/01 – 2026/12</p>
+            <p>University of Southern California, Los Angeles, USA</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Bachelor of Technology</h4>
+            <p class="timeline-date">2021/07 – 2024/06</p>
+            <p>SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering</p>
+            <p>Academic Score: 3.61/4</p>
+          </div>
+        </div>
+        <h3>Certificates</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Introduction to Machine Learning on AWS</h4>
+          </div>
+          <div class="timeline-item">
+            <h4>TCS ion career edge - young professional</h4>
+          </div>
+        </div>
+      </div>
+      <div class="about-experience">
+        <h3>Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Aum Imagineering Pvt. Ltd.</h4>
+            <p class="timeline-date">Junior Software Engineer </p>
+            <p>2024/06 – 2024/11</p>
+            <div class="timeline-details">
+              <ul>
+                <li>Developed AI-powered features for enterprise applications</li>
+                <li>Implemented responsive web interfaces using modern frameworks</li>
+                <li>Collaborated with cross-functional teams for product development</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <h4>NTT Data Ltd. </h4>
+            <p class="timeline-date">Product Engineering and Innovation Intern</p>
+            <p>2023/06 – 2023/10</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Ocius Technologies </h4>
+            <p class="timeline-date">Software Development Intern </p>
+            <p>2021/12 – 2022/04</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Technical Skills</h2>
     <div class="what-im-doing">
-      <h3>Technical Skills</h3>
       <div class="skills-badges">
         <div class="skills-group">
           <h4>Programming Languages</h4>
@@ -129,87 +184,46 @@
 
   <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="portfolio-filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">AI Projects</button>
-      <button class="filter-btn">Mobile Apps</button>
-      <button class="filter-btn">Web Dev</button>
-    </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="project1.jpg" alt="MediaMinds">
-        <div class="portfolio-info">
-          <h4>MediaMinds - AI Video Generation</h4>
-          <p>AI Projects</p>
-          <p class="project-description">Creating short-form video content from text using AI. Features text processing, summarization, audio narration, and synchronized visual elements.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project1.jpg" alt="MediaMinds - AI Video Generation">
+        </div>
+        <div class="project-info">
+          <h3 style="color: var(--accent); font-weight: 700; font-size: 2.1rem;">MediaMinds - AI Video Generation</h3>
+          <p style="color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;">May 2023 – May 2024</p>
+          <p style="font-size: 1.1rem; color: var(--text-secondary);">Creating short-form video content from text using AI. Features text processing, summarization, audio narration, and synchronized visual elements.</p>
+        </div>
+        <div class="project-overlay">
+          <h3>MediaMinds: Text-to-Video Generator [Capstone Project]</h3>
+          <p><strong>May 2023 – May 2024</strong></p>
+          <ul>
+            <li>Developed a pipeline to generate videos from textual inputs using web scraping, NLP preprocessing, Stable Diffusion v1.5, and Google TTS, reducing manual video creation time by 35%.</li>
+            <li>Implemented image generation per text chunk, subtitle overlay using Matplotlib, and custom video rendering via OpenCV and FFmpeg to ensure frame-accurate audio-video synchronization.</li>
+            <li>Integrated optional voice transformation with a pretrained RVC model, enabling voice customization and pitch alteration.</li>
+            <li>Enabled end-to-end automation from article scraping to final video generation with transitions, subtitles, and aligned audio in under 3 minutes.</li>
+          </ul>
+          <a href="#" class="project-btn">View Details</a>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="project2.jpg" alt="PaperWave">
-        <div class="portfolio-info">
-          <h4>PaperWave</h4>
-          <p>Mobile Apps</p>
-          <p class="project-description">Mobile app that transforms academic papers into accessible formats using machine learning, making knowledge accessible to all.</p>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project2.jpg" alt="PaperWave">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="container">
-    <h2>Education</h2>
-    <div class="resume-section">
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Master's of Science - Computer Science (Artificial Intelligence)</h4>
-          <p class="timeline-date">2025/01 – 2026/12</p>
-          <p>University of Southern California, Los Angeles, USA</p>
+        <div class="project-info">
+          <h3 style="color: var(--accent); font-weight: 700; font-size: 2.1rem;">PaperWave</h3>
+          <p style="color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;">July 2024 – Present</p>
+          <p style="font-size: 1.1rem; color: var(--text-secondary);">Mobile app that transforms academic papers into accessible formats using machine learning, making knowledge accessible to all.</p>
         </div>
-        <div class="timeline-item">
-          <h4>Bachelor of Technology</h4>
-          <p class="timeline-date">2021/07 – 2024/06</p>
-          <p>SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering</p>
-          <p>Academic Score: 3.61/4</p>
-        </div>
-      </div>
-    </div>
-    <div class="resume-section">
-      <h3>Certificates</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Introduction to Machine Learning on AWS</h4>
-        </div>
-        <div class="timeline-item">
-          <h4>TCS ion career edge - young professional</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <div class="resume-section">
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Junior Software Engineer</h4>
-          <p class="timeline-date">2024/06 – 2024/11</p>
-          <p>Aum Imagineering Pvt. Ltd.</p>
-          <div class="timeline-details">
-            <ul>
-              <li>Developed AI-powered features for enterprise applications</li>
-              <li>Implemented responsive web interfaces using modern frameworks</li>
-              <li>Collaborated with cross-functional teams for product development</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <h4>Product Engineering and Innovation Intern</h4>
-          <p class="timeline-date">2023/06 – 2023/10</p>
-          <p>NTT Data Ltd.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Software Development Intern</h4>
-          <p class="timeline-date">2021/12 – 2022/04</p>
-          <p>Ocius Technologies</p>
+        <div class="project-overlay">
+          <h3>PaperWave: Mobile-Optimized Research Papers</h3>
+          <p><strong>July 2024 – Present</strong></p>
+          <ul>
+            <li>Building a React Native app that reformats academic PDFs for mobile reading, using PyMuPDF and pdf2image for content extraction.</li>
+            <li>Leveraging LangChain with BART-LARGE-CNN on AWS Elastic Beanstalk to stream chunked summaries, cutting server load by 50%.</li>
+            <li>Designed a minimalist, scroll-friendly UI and integrated async queuing and serverless caching to reduce latency on large (60+ page) uploads.</li>
+          </ul>
+          <a href="#" class="project-btn">View Details</a>
         </div>
       </div>
     </div>
