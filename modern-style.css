@@ -1297,7 +1297,7 @@ footer a {
 
 .skills-group h4 {
   margin-bottom: 0.7rem;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -1704,4 +1704,14 @@ footer a {
 }
 .timeline-item h4 {
   margin-bottom: 0.7rem;
+}
+
+#skills h2 {
+  color: var(--accent);
+}
+#skills h3 {
+  color: var(--text-primary);
+}
+.skills-group h4 {
+  color: var(--text-primary);
 } 
