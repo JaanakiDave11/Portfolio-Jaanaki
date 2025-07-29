@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaMinds - AI Video Generation | Jaanaki Dave</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="futuristic-theme.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.svg" alt="JD" class="nav-favicon">
+    </a>
+    <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About Me</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+
+  <section class="container project-detail-page">
+    <div class="project-detail-header">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+      <h1>MediaMinds - AI Video Generation</h1>
+      <p class="project-subtitle">Capstone Project • May 2023 – May 2024</p>
+    </div>
+
+    <div class="project-detail-content">
+      <div class="project-hero">
+        <img src="project1.jpg" alt="MediaMinds - AI Video Generation" class="project-hero-image">
+        <div class="project-hero-info">
+          <h2>Project Overview</h2>
+          <p>Creating short-form video content from text using AI. Features text processing, summarization, audio narration, and synchronized visual elements.</p>
+          <div class="project-technologies">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">OpenCV</span>
+            <span class="tech-badge">Stable Diffusion</span>
+            <span class="tech-badge">FFmpeg</span>
+            <span class="tech-badge">NLP</span>
+            <span class="tech-badge">Google TTS</span>
+            <span class="tech-badge">Matplotlib</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-sections">
+        <div class="project-section">
+          <h3>Key Features</h3>
+          <ul>
+            <li>Developed a pipeline to generate videos from textual inputs using web scraping, NLP preprocessing, Stable Diffusion v1.5, and Google TTS, reducing manual video creation time by 35%.</li>
+            <li>Implemented image generation per text chunk, subtitle overlay using Matplotlib, and custom video rendering via OpenCV and FFmpeg to ensure frame-accurate audio-video synchronization.</li>
+            <li>Integrated optional voice transformation with a pretrained RVC model, enabling voice customization and pitch alteration.</li>
+            <li>Enabled end-to-end automation from article scraping to final video generation with transitions, subtitles, and aligned audio in under 3 minutes.</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Technical Implementation</h3>
+          <p>The project leverages advanced AI technologies to transform text content into engaging video presentations. The pipeline processes input text through multiple stages:</p>
+          <ol>
+            <li><strong>Text Processing:</strong> Web scraping and NLP preprocessing to extract and structure content</li>
+            <li><strong>Image Generation:</strong> Stable Diffusion v1.5 creates relevant visuals for each text segment</li>
+            <li><strong>Audio Synthesis:</strong> Google TTS converts text to speech with natural intonation</li>
+            <li><strong>Video Assembly:</strong> OpenCV and FFmpeg combine images, audio, and subtitles into final video</li>
+          </ol>
+        </div>
+
+        <div class="project-section">
+          <h3>Results & Impact</h3>
+          <p>This capstone project successfully demonstrated the potential of AI-driven content creation, achieving a 35% reduction in video production time while maintaining high-quality output. The system can process articles and generate complete videos with synchronized audio and visual elements in under 3 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jaanaki Dave</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/jaanakidave" target="_blank">LinkedIn</a>
+      <a href="mailto:jaanaki.dave@gmail.com">Email</a>
+      <a href="https://github.com/JaanakiDave11" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html> 

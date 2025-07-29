@@ -6,7 +6,8 @@
   <title>Jaanaki Dave | Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="modern-style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="futuristic-theme.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -17,9 +18,9 @@
 
   <nav>
     <a href="#home" class="nav-logo">
-      <img src="favicon.svg" alt="JD" class="nav-favicon">
+      <img src="favicon.svg" alt="JD Logo" class="nav-favicon">
+      <span class="nav-name">Jaanaki Dave</span>
     </a>
-    <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About Me</a></li>
@@ -30,18 +31,82 @@
     <button id="theme-toggle">🌓</button>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Hello, I am<br>Jaanaki Dave</h1>
-      <p>Graduate student in Computer Science with a strong interest in building practical, AI-driven solutions. Experienced in software development, machine learning, and natural language processing. Enjoy turning ideas into end-to-end products—from mobile apps and automation tools to scalable systems. Curious, detail-oriented, and always eager to learn and improve.</p>
-      <div class="hero-tags">
-        <span class="tag">💻 Full Stack Developer</span>
-        <span class="tag">🤖 AI Enthusiast</span>
-        <span class="tag">📱 Android Dev</span>
+  <section class="hero circuit-bg" id="home">
+    <!-- Animated Background Elements -->
+    <div class="hero-bg-elements">
+      <div class="network-lines">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="profile-pic.jpeg" alt="Jaanaki Dave">
+    
+    <!-- Background Logo -->
+    <div class="hero-bg-logo">
+      <img src="favicon.svg" alt="JD Logo Background" class="hero-logo-bg">
+    </div>
+    
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-greeting">
+          <span class="greeting-text">Hello, I am</span>
+        </div>
+                          <h1 class="hero-title">
+          <span class="hero-name">Jaanaki Dave.</span>
+          <div class="typing-cursor"></div>
+          <div class="title-glow"></div>
+        </h1>
+        <p class="hero-description">Graduate student in Computer Science with a strong interest in building practical, AI-driven solutions. Experienced in software development, machine learning, and natural language processing. Enjoy turning ideas into end-to-end products—from mobile apps and automation tools to scalable systems. Curious, detail-oriented, and always eager to learn and improve.</p>
+        
+        <!-- Interactive CTA Buttons -->
+        <div class="hero-cta">
+          <a href="#projects" class="cta-primary">
+            <span>View My Work</span>
+            <div class="cta-glow"></div>
+          </a>
+          <a href="#contact" class="cta-secondary">
+            <span>Get In Touch</span>
+            <div class="cta-border"></div>
+          </a>
+        </div>
+        
+        <!-- Enhanced Tags -->
+        <div class="hero-tags">
+          <span class="tag tech-hover" data-tooltip="Full Stack Development">
+            <span class="tag-icon">⚡</span>
+            <span class="tag-text">Full Stack Developer</span>
+          </span>
+          <span class="tag tech-hover" data-tooltip="AI & Machine Learning">
+            <span class="tag-icon">🤖</span>
+            <span class="tag-text">AI/ML Engineer</span>
+          </span>
+          <span class="tag tech-hover" data-tooltip="Mobile Development">
+            <span class="tag-icon">📱</span>
+            <span class="tag-text">Mobile Developer</span>
+          </span>
+          <span class="tag tech-hover" data-tooltip="System Architecture">
+            <span class="tag-icon">🔧</span>
+            <span class="tag-text">System Architect</span>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Enhanced Profile Image -->
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="profile-pic.JPG" alt="Jaanaki Dave" class="profile-pic">
+          <div class="image-glow"></div>
+          <div class="image-border"></div>
+          <div class="floating-elements">
+            <div class="float-icon float-2">🚀</div>
+            <div class="float-icon float-3">💻</div>
+            <div class="floating-cube cube-1"></div>
+            <div class="floating-cube cube-3"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -105,126 +170,199 @@
 
   <section id="skills" class="container">
     <h2>Technical Skills</h2>
-    <div class="what-im-doing">
-      <div class="skills-badges">
-        <div class="skills-group">
-          <h4>Programming Languages</h4>
-          <div class="badges">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">C++</span>
-            <span class="skill-badge">Java</span>
-            <span class="skill-badge">Kotlin</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">R</span>
-            <span class="skill-badge">Bash</span>
-            <span class="skill-badge">SQL</span>
-          </div>
+    <p class="section-subtitle">Comprehensive expertise across multiple technology domains</p>
+    
+    <div class="skills-features">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">💻</span>
+          <div class="icon-glow"></div>
         </div>
-        <div class="skills-group">
-          <h4>Web Development</h4>
-          <div class="badges">
-            <span class="skill-badge">HTML5</span>
-            <span class="skill-badge">CSS3</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">PHP</span>
-            <span class="skill-badge">React.js</span>
-            <span class="skill-badge">Angular</span>
-            <span class="skill-badge">AngularJS</span>
-            <span class="skill-badge">Node.js</span>
-          </div>
+        <h3>Programming Languages</h3>
+        <p class="feature-description">Core languages for software development and data analysis</p>
+        <div class="feature-skills">
+          <span class="skill-item">Python</span>
+          <span class="skill-item">C++</span>
+          <span class="skill-item">Java</span>
+          <span class="skill-item">Kotlin</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">R</span>
+          <span class="skill-item">Bash</span>
+          <span class="skill-item">SQL</span>
         </div>
-        <div class="skills-group">
-          <h4>Software &amp; Tools</h4>
-          <div class="badges">
-            <span class="skill-badge">IntelliJ IDEA</span>
-            <span class="skill-badge">Visual Studio</span>
-            <span class="skill-badge">RStudio</span>
-            <span class="skill-badge">Sublime Text</span>
-            <span class="skill-badge">Android Studio</span>
-            <span class="skill-badge">Git</span>
-            <span class="skill-badge">Figma</span>
-          </div>
+        <div class="feature-glow"></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">🌐</span>
+          <div class="icon-glow"></div>
         </div>
-        <div class="skills-group">
-          <h4>Database &amp; Cloud</h4>
-          <div class="badges">
-            <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">Firebase</span>
-            <span class="skill-badge">MongoDB</span>
-            <span class="skill-badge">SQLite</span>
-            <span class="skill-badge">AWS (S3, EC2, Lambda)</span>
-            <span class="skill-badge">Google Cloud Platform</span>
-          </div>
+        <h3>Web Development</h3>
+        <p class="feature-description">Full-stack web development with modern frameworks</p>
+        <div class="feature-skills">
+          <span class="skill-item">HTML5</span>
+          <span class="skill-item">CSS3</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">PHP</span>
+          <span class="skill-item">React.js</span>
+          <span class="skill-item">Angular</span>
+          <span class="skill-item">Node.js</span>
         </div>
-        <div class="skills-group">
-          <h4>Data Science &amp; ML Tools</h4>
-          <div class="badges">
-            <span class="skill-badge">Jupyter Notebook</span>
-            <span class="skill-badge">Pandas</span>
-            <span class="skill-badge">NumPy</span>
-            <span class="skill-badge">Scikit-learn</span>
-            <span class="skill-badge">TensorFlow</span>
-            <span class="skill-badge">Keras</span>
-            <span class="skill-badge">PyTorch</span>
-            <span class="skill-badge">Matplotlib</span>
-            <span class="skill-badge">Tableau</span>
-            <span class="skill-badge">Power BI</span>
-          </div>
+        <div class="feature-glow"></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">🛠️</span>
+          <div class="icon-glow"></div>
         </div>
-        <div class="skills-group">
-          <h4>Mobile Development</h4>
-          <div class="badges">
-            <span class="skill-badge">Android (Java/Kotlin)</span>
-            <span class="skill-badge">React Native</span>
-          </div>
+        <h3>Software & Tools</h3>
+        <p class="feature-description">Professional development tools and environments</p>
+        <div class="feature-skills">
+          <span class="skill-item">IntelliJ IDEA</span>
+          <span class="skill-item">Visual Studio</span>
+          <span class="skill-item">RStudio</span>
+          <span class="skill-item">Android Studio</span>
+          <span class="skill-item">Git</span>
+          <span class="skill-item">Figma</span>
         </div>
+        <div class="feature-glow"></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">☁️</span>
+          <div class="icon-glow"></div>
+        </div>
+        <h3>Database & Cloud</h3>
+        <p class="feature-description">Data management and cloud infrastructure solutions</p>
+        <div class="feature-skills">
+          <span class="skill-item">MySQL</span>
+          <span class="skill-item">Firebase</span>
+          <span class="skill-item">MongoDB</span>
+          <span class="skill-item">SQLite</span>
+          <span class="skill-item">AWS</span>
+          <span class="skill-item">Google Cloud</span>
+        </div>
+        <div class="feature-glow"></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">🤖</span>
+          <div class="icon-glow"></div>
+        </div>
+        <h3>Data Science & ML</h3>
+        <p class="feature-description">Machine learning and data analysis expertise</p>
+        <div class="feature-skills">
+          <span class="skill-item">Jupyter</span>
+          <span class="skill-item">Pandas</span>
+          <span class="skill-item">NumPy</span>
+          <span class="skill-item">TensorFlow</span>
+          <span class="skill-item">PyTorch</span>
+          <span class="skill-item">Tableau</span>
+        </div>
+        <div class="feature-glow"></div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <span class="icon">📱</span>
+          <div class="icon-glow"></div>
+        </div>
+        <h3>Mobile Development</h3>
+        <p class="feature-description">Cross-platform and native mobile applications</p>
+        <div class="feature-skills">
+          <span class="skill-item">Android</span>
+          <span class="skill-item">React Native</span>
+          <span class="skill-item">Kotlin</span>
+          <span class="skill-item">Java</span>
+        </div>
+        <div class="feature-glow"></div>
       </div>
     </div>
   </section>
 
   <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <img src="project1.jpg" alt="MediaMinds - AI Video Generation">
+    <p class="section-subtitle">Innovative solutions combining AI, mobile development, and cutting-edge technologies</p>
+    
+    <div class="projects-features">
+      <div class="project-feature-card">
+        <div class="project-feature-icon">
+          <span class="project-icon">🎬</span>
+          <div class="project-icon-glow"></div>
         </div>
-        <div class="project-info">
-          <h3 style="color: var(--accent); font-weight: 700; font-size: 2.1rem;">MediaMinds - AI Video Generation</h3>
-          <p style="color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;">May 2023 – May 2024</p>
-          <p style="font-size: 1.1rem; color: var(--text-secondary);">Creating short-form video content from text using AI. Features text processing, summarization, audio narration, and synchronized visual elements.</p>
+        <div class="project-feature-content">
+          <div class="project-badge">Capstone Project</div>
+          <h3>MediaMinds: AI Video Generation</h3>
+          <p class="project-feature-description">Revolutionary text-to-video platform that transforms articles into engaging short-form content using AI-powered image generation and audio synthesis.</p>
+          <div class="project-feature-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span class="highlight-text">35% faster video creation</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🎯</span>
+              <span class="highlight-text">End-to-end automation</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🔊</span>
+              <span class="highlight-text">Voice customization</span>
+            </div>
+          </div>
+          <div class="project-feature-tech">
+            <span class="tech-item">Python</span>
+            <span class="tech-item">OpenCV</span>
+            <span class="tech-item">Stable Diffusion</span>
+            <span class="tech-item">FFmpeg</span>
+            <span class="tech-item">NLP</span>
+          </div>
+          <div class="project-feature-actions">
+            <a href="mediaminds.html" class="project-feature-btn primary">View Details</a>
+            <span class="project-date">May 2023 – May 2024</span>
+          </div>
         </div>
-        <div class="project-overlay">
-          <h3>MediaMinds: Text-to-Video Generator [Capstone Project]</h3>
-          <p><strong>May 2023 – May 2024</strong></p>
-          <ul>
-            <li>Developed a pipeline to generate videos from textual inputs using web scraping, NLP preprocessing, Stable Diffusion v1.5, and Google TTS, reducing manual video creation time by 35%.</li>
-            <li>Implemented image generation per text chunk, subtitle overlay using Matplotlib, and custom video rendering via OpenCV and FFmpeg to ensure frame-accurate audio-video synchronization.</li>
-            <li>Integrated optional voice transformation with a pretrained RVC model, enabling voice customization and pitch alteration.</li>
-            <li>Enabled end-to-end automation from article scraping to final video generation with transitions, subtitles, and aligned audio in under 3 minutes.</li>
-          </ul>
-          <a href="#" class="project-btn">View Details</a>
-        </div>
+        <div class="project-feature-glow"></div>
       </div>
-      <div class="project-card">
-        <div class="project-image">
-          <img src="project2.jpg" alt="PaperWave">
+
+      <div class="project-feature-card">
+        <div class="project-feature-icon">
+          <span class="project-icon">📚</span>
+          <div class="project-icon-glow"></div>
         </div>
-        <div class="project-info">
-          <h3 style="color: var(--accent); font-weight: 700; font-size: 2.1rem;">PaperWave</h3>
-          <p style="color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;">July 2024 – Present</p>
-          <p style="font-size: 1.1rem; color: var(--text-secondary);">Mobile app that transforms academic papers into accessible formats using machine learning, making knowledge accessible to all.</p>
+        <div class="project-feature-content">
+          <div class="project-badge">In Progress</div>
+          <h3>PaperWave: Mobile Research Papers</h3>
+          <p class="project-feature-description">Mobile app that transforms complex academic papers into accessible, mobile-friendly formats using advanced AI summarization and content optimization.</p>
+          <div class="project-feature-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">📱</span>
+              <span class="highlight-text">Mobile-optimized reading</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🧠</span>
+              <span class="highlight-text">AI-powered summaries</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span class="highlight-text">50% reduced server load</span>
+            </div>
+          </div>
+          <div class="project-feature-tech">
+            <span class="tech-item">React Native</span>
+            <span class="tech-item">Python</span>
+            <span class="tech-item">AWS</span>
+            <span class="tech-item">LangChain</span>
+            <span class="tech-item">PyMuPDF</span>
+          </div>
+          <div class="project-feature-actions">
+            <a href="paperwave.html" class="project-feature-btn primary">View Details</a>
+            <span class="project-date">July 2024 – Present</span>
+          </div>
         </div>
-        <div class="project-overlay">
-          <h3>PaperWave: Mobile-Optimized Research Papers</h3>
-          <p><strong>July 2024 – Present</strong></p>
-          <ul>
-            <li>Building a React Native app that reformats academic PDFs for mobile reading, using PyMuPDF and pdf2image for content extraction.</li>
-            <li>Leveraging LangChain with BART-LARGE-CNN on AWS Elastic Beanstalk to stream chunked summaries, cutting server load by 50%.</li>
-            <li>Designed a minimalist, scroll-friendly UI and integrated async queuing and serverless caching to reduce latency on large (60+ page) uploads.</li>
-          </ul>
-          <a href="#" class="project-btn">View Details</a>
-        </div>
+        <div class="project-feature-glow"></div>
       </div>
     </div>
   </section>
@@ -254,18 +392,23 @@
   </section>
 
   <footer>
-    <p>© 2025 Jaanaki Dave </p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/jaanakidave" target="_blank">LinkedIn</a>
-      <a href="mailto:jaanaki.dave@gmail.com">Email</a>
-      <a href="https://github.com/JaanakiDave11" target="_blank">GitHub</a>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="favicon.svg" alt="JD Logo" class="footer-favicon">
+        <p>© 2025 Jaanaki Dave</p>
+      </div>
+      <div class="footer-typing-separator"></div>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/jaanakidave" target="_blank">LinkedIn</a>
+        <a href="mailto:jaanaki.dave@gmail.com">Email</a>
+        <a href="https://github.com/JaanakiDave11" target="_blank">GitHub</a>
+      </div>
     </div>
   </footer>
 
   <!-- Project Preview Modal -->
   <div class="modal" id="project-modal">
     <div class="modal-content">
-      <button class="modal-close">×</button>
       <div class="modal-body"></div>
     </div>
   </div>

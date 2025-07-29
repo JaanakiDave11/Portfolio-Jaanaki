@@ -2,8 +2,7 @@
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-// Mobile Navigation
-const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+// Navigation
 const navLinks = document.querySelector('.nav-links');
 
 // Scroll Progress Indicator
@@ -14,8 +13,7 @@ const backToTop = document.querySelector('.back-to-top');
 
 // Project Modal Elements
 const modal = document.getElementById('project-modal');
-const modalContent = modal.querySelector('.modal-body');
-const modalClose = modal.querySelector('.modal-close');
+const modalContent = modal?.querySelector('.modal-body');
 
 // Form Elements
 const contactForm = document.querySelector('.contact-form');
@@ -27,6 +25,8 @@ const animationObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
       }
     });
   },
@@ -37,77 +37,76 @@ const animationObserver = new IntersectionObserver(
 );
 
 // Theme Toggle Handler
-themeToggle.addEventListener('click', () => {
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  updateThemeColors(newTheme);
-  themeToggle.textContent = newTheme === 'dark' ? '🌓' : '☀️';
-  
-  // Add rotation animation
-  themeToggle.style.transform = 'rotate(180deg)';
-  setTimeout(() => {
-    themeToggle.style.transform = '';
-  }, 500);
-});
-
-// Mobile Navigation
-function toggleMobileNav() {
-  const isOpen = navLinks.classList.contains('active');
-  navLinks.classList.toggle('active');
-  mobileNavToggle.textContent = isOpen ? '☰' : '✕';
-  
-  if (!isOpen) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    // Add enhanced interactive effects
+    themeToggle.style.transform = 'scale(0.9) rotate(180deg)';
+    themeToggle.style.boxShadow = '0 0 30px rgba(0, 212, 255, 0.5)';
+    
+    // Update theme
+    updateThemeColors(newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '🌓' : '☀️';
+    
+    // Add ripple effect
+    const ripple = document.createElement('div');
+    ripple.style.position = 'absolute';
+    ripple.style.borderRadius = '50%';
+    ripple.style.background = 'rgba(0, 212, 255, 0.3)';
+    ripple.style.transform = 'scale(0)';
+    ripple.style.animation = 'ripple 0.6s linear';
+    ripple.style.left = '50%';
+    ripple.style.top = '50%';
+    ripple.style.width = '100px';
+    ripple.style.height = '100px';
+    ripple.style.marginLeft = '-50px';
+    ripple.style.marginTop = '-50px';
+    ripple.style.pointerEvents = 'none';
+    themeToggle.appendChild(ripple);
+    
+    // Reset button state
+    setTimeout(() => {
+      themeToggle.style.transform = '';
+      themeToggle.style.boxShadow = '';
+      ripple.remove();
+    }, 600);
+  });
 }
 
-function closeMobileNav() {
-  navLinks.classList.remove('active');
-  mobileNavToggle.textContent = '☰';
-  document.body.style.overflow = '';
-}
-
-// Event Listeners
-mobileNavToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  toggleMobileNav();
-});
-
+// Navigation Event Listeners
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', closeMobileNav);
-});
-
-document.addEventListener('click', (e) => {
-  if (navLinks.classList.contains('active') &&
-      !e.target.closest('.nav-links') &&
-      !e.target.closest('.mobile-nav-toggle')) {
-    closeMobileNav();
-  }
+  link.addEventListener('click', () => {
+    // Smooth scroll is handled by the existing scroll handler
+  });
 });
 
 // Scroll Progress Handler
-window.addEventListener('scroll', () => {
-  const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (window.pageYOffset / totalScroll) * 100;
-  scrollProgress.style.width = `${progress}%`;
-  
-  // Update back to top button visibility
-  if (window.pageYOffset > 300) {
-    backToTop.classList.add('visible');
-  } else {
-    backToTop.classList.remove('visible');
-  }
-});
+if (scrollProgress) {
+  window.addEventListener('scroll', () => {
+    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.pageYOffset / totalScroll) * 100;
+    scrollProgress.style.width = `${progress}%`;
+    
+    // Update back to top button visibility
+    if (window.pageYOffset > 300) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+}
 
 // Back to Top Handler
-backToTop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
+}
 
 // Expandable Skill Cards
 document.querySelectorAll('.skill-card').forEach(card => {
@@ -131,32 +130,68 @@ document.querySelectorAll('.timeline-item').forEach(item => {
   });
 });
 
-// Project Modal Handlers
-document.querySelectorAll('.portfolio-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const title = item.querySelector('h4').textContent;
-    const description = item.querySelector('.project-description').textContent;
-    const image = item.querySelector('img').src;
-    
-    modalContent.innerHTML = `
-      <h3>${title}</h3>
-      <img src="${image}" alt="${title}" style="width: 100%; border-radius: var(--border-radius); margin: 1rem 0;">
-      <p>${description}</p>
-    `;
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const targetPosition = target.offsetTop - navHeight - 20; // 20px extra padding
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
-modalClose.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
+// Add subtle hover effects
+document.querySelectorAll('.project-card, .skills-group, .tag').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.style.transform = 'translateY(-5px)';
+  });
+  
+  el.addEventListener('mouseleave', () => {
+    el.style.transform = 'translateY(0)';
+  });
 });
 
+// Initialize animations
+document.querySelectorAll('.skill-card, .portfolio-item, .timeline-item, .project-card').forEach(element => {
+  animationObserver.observe(element);
+});
+
+// Project Modal Handlers (for legacy portfolio items)
+if (modal && modalContent) {
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const title = item.querySelector('h4').textContent;
+      const description = item.querySelector('.project-description').textContent;
+      const image = item.querySelector('img').src;
+      
+      modalContent.innerHTML = `
+        <h3>${title}</h3>
+        <img src="${image}" alt="${title}" style="width: 100%; border-radius: var(--border-radius); margin: 1rem 0;">
+        <p>${description}</p>
+      `;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+}
+
 function closeModal() {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
 // Toast Notifications
@@ -166,20 +201,22 @@ function showToast(message, type = 'success') {
   toast.textContent = message;
   
   const container = document.querySelector('.toast-container');
-  container.appendChild(toast);
-  
-  requestAnimationFrame(() => {
-    toast.classList.add('active');
-  });
-  
-  setTimeout(() => {
-    toast.classList.remove('active');
-    setTimeout(() => toast.remove(), 300);
-  }, 3000);
+  if (container) {
+    container.appendChild(toast);
+    
+    requestAnimationFrame(() => {
+      toast.classList.add('active');
+    });
+    
+    setTimeout(() => {
+      toast.classList.remove('active');
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
 }
 
 // Form submission handler
-if (contactForm) {
+if (contactForm && loadingSpinner) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     loadingSpinner.classList.add('active');
@@ -197,18 +234,11 @@ if (contactForm) {
   });
 }
 
-// Initialize animations
-document.querySelectorAll('.skill-card, .portfolio-item, .timeline-item').forEach(element => {
-  animationObserver.observe(element);
-});
-
 // Handle mobile orientation change
 window.addEventListener('orientationchange', () => {
   document.body.style.overflow = '';
-  navLinks.classList.remove('active');
-  mobileNavToggle.textContent = '☰';
   setTimeout(updateActiveSection, 100);
-  });
+});
 
 // Portfolio Filtering
 const filterButtons = document.querySelectorAll('.filter-btn');
@@ -232,20 +262,6 @@ filterButtons.forEach(button => {
         item.style.display = 'none';
       }
     });
-  });
-});
-
-// Smooth Scrolling for Navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-    }
   });
 });
 
