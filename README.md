@@ -23,17 +23,18 @@ This portfolio highlights:
 - **Extras**: Responsive layout, animated hero section, interactive tags
 
 ## 📁 File Structure
+
+```
 .
-├── index.html # Main portfolio page
-├── mediaminds.html # Project detail page for MediaMinds
-├── paperwave.html # Project detail page for PaperWave
+├── index.html              # Main portfolio page  
+├── mediaminds.html         # Project detail page for MediaMinds  
+├── paperwave.html          # Project detail page for PaperWave  
 ├── assets/
-│ ├── css/ # Stylesheets and themes
-│ ├── js/ # JavaScript files
-│ └── images/ # Profile pic, logo, icons, etc.
-├── README.md
-
-
+│   ├── css/                # Stylesheets and themes  
+│   ├── js/                 # JavaScript files  
+│   └── images/             # Profile pic, logo, icons, etc.  
+├── README.md               # This file  
+```
 ## 🧩 Featured Projects
 
 ### 🎬 MediaMinds – AI Video Generation  
