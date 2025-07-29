@@ -23,7 +23,6 @@ This portfolio highlights:
 - **Extras**: Responsive layout, animated hero section, interactive tags
 
 ## 📁 File Structure
-
 .
 ├── index.html # Main portfolio page
 ├── mediaminds.html # Project detail page for MediaMinds
