@@ -2109,6 +2109,7 @@ footer {
   /* Navigation */
   nav {
     padding: var(--spacing-sm) 5%;
+    justify-content: space-between;
   }
 
   .nav-logo {
@@ -2158,11 +2159,32 @@ footer {
     cursor: pointer;
     padding: var(--spacing-xs);
     transition: all var(--transition-normal);
+    order: 2;
   }
 
   .mobile-menu-toggle:hover {
     color: var(--accent-highlight);
     transform: scale(1.1);
+  }
+
+  /* Mobile navigation layout */
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+
+  .mobile-menu-toggle {
+    order: 2;
+  }
+
+  #theme-toggle {
+    order: 3;
   }
 
   /* Hero Section */
