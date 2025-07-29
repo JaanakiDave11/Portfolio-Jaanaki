@@ -550,6 +550,7 @@ nav {
   color: var(--text-secondary);
   font-weight: 500;
   font-family: var(--font-mono);
+  text-align: center;
 }
 
 /* Light theme greeting text */
