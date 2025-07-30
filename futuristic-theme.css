@@ -197,12 +197,12 @@ nav {
   height: 40px;
   margin-right: var(--spacing-sm);
   transition: all var(--transition-normal);
-  filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
 /* Light theme favicon adjustment */
 :root[data-theme="light"] .nav-favicon {
-  filter: invert(0) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 
 .nav-name {
@@ -225,7 +225,7 @@ nav {
 
 .nav-logo:hover .nav-favicon {
   transform: scale(1.1) rotate(5deg);
-  filter: invert(1) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
 }
 
 .nav-logo:hover .nav-name {
@@ -522,8 +522,13 @@ nav {
 .hero-logo-bg {
   width: 400px;
   height: 400px;
-  filter: invert(1) blur(2px);
+  filter: blur(2px);
   animation: float 6s ease-in-out infinite;
+}
+
+/* Light theme hero logo background adjustment */
+:root[data-theme="light"] .hero-logo-bg {
+  filter: invert(1) blur(2px);
 }
 
 @keyframes float {
@@ -1767,17 +1772,17 @@ footer {
   width: 30px;
   height: 30px;
   transition: all var(--transition-normal);
-  filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
 /* Light theme footer favicon adjustment */
 :root[data-theme="light"] .footer-favicon {
-  filter: invert(0) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 
 .footer-logo:hover .footer-favicon {
   transform: scale(1.1) rotate(5deg);
-  filter: invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
 }
 
 .footer-logo p {
