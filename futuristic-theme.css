@@ -1591,6 +1591,27 @@ h2::after {
   color: #1e293b;
 }
 
+.timeline-details ul {
+  padding-left: 1.25rem;
+  margin: var(--spacing-sm) 0;
+}
+
+.timeline-details li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+:root[data-theme="light"] .timeline-details li {
+  color: #1e293b;
+}
+
+.timeline-item .project-feature-tech {
+  margin-top: var(--spacing-sm);
+  margin-bottom: 0;
+}
+
 /* Contact Section */
 .contact-grid {
   display: grid;
